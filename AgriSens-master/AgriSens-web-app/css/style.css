@@ -107,6 +107,7 @@ html {
 
 .header .navbar a:hover {
   color: var(--Soft-Red);
+  text-decoration: underline;
 }
 
 .header .navbar .btn {

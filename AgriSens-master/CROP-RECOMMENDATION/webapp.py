@@ -93,6 +93,11 @@ def main():
         else:
             prediction = predict_crop(nitrogen, phosphorus, potassium, temperature, humidity, ph, rainfall)
             st.success(f"The recommended crop is: {prediction[0]}")
+            # Display an image of the predicted crop from the internet
+            crop_name = prediction[0].replace(" ", "_").lower()
+            image_url = f"https://example.com/crop_images/{crop_name}.jpg"
+            st.image(image_url, caption=f"Recommended crop: {prediction[0]}", use_container_width=True)
+        
 
 
 ## Running the main function
