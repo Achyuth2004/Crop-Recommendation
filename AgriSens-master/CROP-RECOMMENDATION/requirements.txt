@@ -1,7 +1,7 @@
-# numpy
-# pickle-mixin 
-# streamlit
-# seaborn
-# pandas
-#matplotlib
-# scikit-learn
+streamlit
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+Pillow
