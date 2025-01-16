@@ -6,18 +6,7 @@ from sklearn.preprocessing import LabelEncoder
 
 def load_models():
     """Load the trained models and encoders."""
-    # classifier = pickle.load(open('classifier.pkl', 'rb'))
-    import os
-
-    def load_models():
-      try:
-        with open('classifier.pkl', 'rb') as f:
-            classifier = pickle.load(f)
-        return classifier
-      except FileNotFoundError as e:
-        st.error(f"Error: {e}. Make sure 'classifier.pkl' is in the correct directory.")
-        return None
-
+    classifier = pickle.load(open('classifier.pkl', 'rb'))
     encoder = pickle.load(open('fertilizer.pkl', 'rb'))
     return classifier, encoder
 
