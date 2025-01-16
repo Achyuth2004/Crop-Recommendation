@@ -6,11 +6,7 @@ from sklearn.preprocessing import LabelEncoder
 
 def load_models():
     """Load the trained models and encoders."""
-    # classifier = pickle.load(open('classifier.pkl', 'rb'))
-    import os
-    with open(os.path.join(os.path.dirname(__file__), 'classifier.pkl'), 'rb') as file:
-    classifier = pickle.load(file)
-
+    classifier = pickle.load(open('classifier.pkl', 'rb'))
     encoder = pickle.load(open('fertilizer.pkl', 'rb'))
     return classifier, encoder
 
