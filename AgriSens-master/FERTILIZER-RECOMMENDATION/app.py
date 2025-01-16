@@ -9,12 +9,12 @@ def load_models():
     # classifier = pickle.load(open('classifier.pkl', 'rb'))
     import os
 
-   def load_models():
-     try:
+    def load_models():
+      try:
         with open('classifier.pkl', 'rb') as f:
             classifier = pickle.load(f)
         return classifier
-     except FileNotFoundError as e:
+      except FileNotFoundError as e:
         st.error(f"Error: {e}. Make sure 'classifier.pkl' is in the correct directory.")
         return None
 
