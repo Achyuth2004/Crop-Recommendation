@@ -18,11 +18,11 @@ from sklearn.preprocessing import LabelEncoder
 
 # Display Images
 # import Image from pillow to open images
-from PIL import Image
-img = Image.open("crop.png")
+# from PIL import Image
+# img = Image.open("CROP-RECOMMENDATION\crop.png")
 # display image using streamlit
 # width is used to set the width of an image
-st.image(img)
+st.image("crop.png",caption=" ")
 
 df= pd.read_csv('Crop_recommendation.csv')
 
