@@ -43,7 +43,10 @@ html {
   margin-top: 10rem;
   margin-bottom: 5rem;
 }
-
+.heading img {
+  width: 20px;
+  height: 20px;
+}
 .heading h1 {
   padding-bottom: 2rem;
 }
@@ -97,8 +100,14 @@ html {
 
 .header .logo {
   cursor: pointer;
+  display: flex;
 }
-
+.header img{
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+}
 .header .navbar a {
   margin-left: 2rem;
   font-size: 1.7rem;
