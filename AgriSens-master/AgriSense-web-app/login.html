@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            font-family: 'Arial', sans-serif;
+        }
+
+        .btn-primary {
+            background-color: #ff6f61; /* Change button color to coral */
+            border-color: #ff6f61; /* Change button border color */
+        }
+
+        .btn-primary:hover {
+            background-color: #ff4a3d; /* Darker shade on hover */
+            border-color: #ff4a3d; /* Change hover border color */
+        }
+
+        .form-container {
+            display: none;
+        }
+
+        .form-container.active {
+            display: block;
+        }
+
+        .form-floating label {
+            color: #00704A;
+        }
+
+        .form-floating input {
+            border: 2px solid #00704A;
+        }
+
+        .form-floating input:focus {
+            border-color: #ff6f61;
+            box-shadow: 0 0 5px rgba(255, 111, 97, 0.5);
+        }
+
+        .text-body-emphasis {
+            color: #00704A;
+        }
+
+        .bg-body-tertiary {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .switch-link {
+            color: #ff6f61;
+            text-decoration: none;
+        }
+
+        .switch-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <div class="row align-items-center g-lg-5 py-5">
+            <div class="col-lg-7 text-center text-lg-start">
+                <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Agrisense</h1>
+                <p class="col-lg-10 fs-4">Agrisense welcomes you for our beloved services.</p>
+            </div>
+            <div class="col-md-10 mx-auto col-lg-5">
+                <div id="sign-in-form" class="form-container active">
+                    <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="signInEmail" placeholder="name@example.com">
+                            <label for="signInEmail">Email address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="signInPassword" placeholder="Password">
+                            <label for="signInPassword">Password</label>
+                        </div>
+                        <div class="checkbox mb-3">
+                            <label>
+                                <input type="checkbox" value="remember-me"> Remember me
+                            </label>
+                        </div>
+                        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+                        <hr class="my-4">
+                        <small class="text-body-secondary">Don't have an account? <a href="#" id="switch-to-sign-up" class="switch-link">Sign up</a></small>
+                    </form>
+                </div>
+                <div id="sign-up-form" class="form-container">
+                    <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="signUpName" placeholder="Full Name">
+                            <label for="signUpName">Full Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="signUpEmail" placeholder="name@example.com">
+                            <label for="signUpEmail">Email address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="signUpPassword" placeholder="Password">
+                            <label for="signUpPassword">Password</label>
+                        </div>
+                        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+                        <hr class="my-4">
+                        <small class="text-body-secondary">Already have an account? <a href="#" id="switch-to-sign-in" class="switch-link">Sign in</a></small>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('switch-to-sign-up').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('sign-in-form').classList.remove('active');
+            document.getElementById('sign-up-form').classList.add('active');
+        });
+
+        document.getElementById('switch-to-sign-in').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('sign-up-form').classList.remove('active');
+            document.getElementById('sign-in-form').classList.add('active');
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
+```
+
+This version includes a colorful gradient background, coral-colored buttons, and some additional styling to make the form elements more visually appealing. The switch links are also styled to match the new color scheme. Let me know if you need any further adjustments!
