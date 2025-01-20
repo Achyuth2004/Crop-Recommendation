@@ -6,8 +6,8 @@ from sklearn.preprocessing import LabelEncoder
 
 def load_models():
     """Load the trained models and encoders."""
-    classifier = pickle.load(open('/AgriSens-master/FERTILIZER-RECOMMENDATION/classifier.pkl', 'rb'))
-    encoder = pickle.load(open('/AgriSens-master/FERTILIZER-RECOMMENDATION/fertilizer.pkl', 'rb'))
+    classifier = pickle.load(open('FERTILIZER-RECOMMENDATION\classifier.pkl', 'rb'))
+    encoder = pickle.load(open('FERTILIZER-RECOMMENDATION\fertilizer.pkl', 'rb'))
     return classifier, encoder
 
 def main():
