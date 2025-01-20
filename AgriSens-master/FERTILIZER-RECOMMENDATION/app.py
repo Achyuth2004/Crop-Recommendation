@@ -61,8 +61,8 @@ from sklearn.preprocessing import LabelEncoder
 
 def load_models():
     """Load the trained models and encoders."""
-    classifier_path = '../AgriSens-master/FERTILIZER-RECOMMENDATION/classifier.pkl'
-    encoder_path = '../AgriSens-master/FERTILIZER-RECOMMENDATION/fertilizer.pkl'
+    classifier_path = '/AgriSens-master/FERTILIZER-RECOMMENDATION/classifier.pkl'
+    encoder_path = '/AgriSens-master/FERTILIZER-RECOMMENDATION/fertilizer.pkl'
 
     if os.path.exists(classifier_path) and os.path.exists(encoder_path):
         classifier = pickle.load(open(classifier_path, 'rb'))
