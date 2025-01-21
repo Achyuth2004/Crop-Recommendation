@@ -4,4 +4,8 @@ pandas
 scikit-learn
 matplotlib
 seaborn
+<<<<<<< HEAD
 Pillow
+=======
+Pillow
+>>>>>>> b76b1f21778fd7d387da3a83a3ecfdb90e921cd4
