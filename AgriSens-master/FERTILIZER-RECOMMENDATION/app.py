@@ -9,11 +9,18 @@ from sklearn.preprocessing import LabelEncoder
 #     classifier = pickle.load(open('FERTILIZER-RECOMMENDATION\classifier.pkl', 'rb'))
 #     encoder = pickle.load(open('fertilizer.pkl', 'rb'))
 #     return classifier, encoder
+import pickle
+
 def load_models():
     """Load the trained models and encoders."""
-    classifier = pickle.load(open('classifier.pkl', 'rb'))
-    encoder = pickle.load(open('fertilizer.pkl', 'rb'))
+    with open('classifier.pkl', 'rb') as classifier_file:
+        classifier = pickle.load(classifier_file)
+    
+    with open('fertilizer.pkl', 'rb') as encoder_file:
+        encoder = pickle.load(encoder_file)
+    
     return classifier, encoder
+
 
 
 
