@@ -4,11 +4,19 @@ import numpy as np
 import pickle
 from sklearn.preprocessing import LabelEncoder
 
+# def load_models():
+#     """Load the trained models and encoders."""
+#     classifier = pickle.load(open('FERTILIZER-RECOMMENDATION\classifier.pkl', 'rb'))
+#     encoder = pickle.load(open('fertilizer.pkl', 'rb'))
+#     return classifier, encoder
+import os
+
 def load_models():
     """Load the trained models and encoders."""
-    classifier = pickle.load(open('FERTILIZER-RECOMMENDATION\classifier.pkl', 'rb'))
-    encoder = pickle.load(open('fertilizer.pkl', 'rb'))
+    classifier = pickle.load(open(os.path.join('models', 'classifier.pkl'), 'rb'))
+    encoder = pickle.load(open(os.path.join('models', 'fertilizer.pkl'), 'rb'))
     return classifier, encoder
+
 
 def main():
     st.title("Fertilizer Recommendation System")
