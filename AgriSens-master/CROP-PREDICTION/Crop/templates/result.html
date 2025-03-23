@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Result</title>
+
+  <script src="https://kit.fontawesome.com/47101d2035.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: rgb(41, 43, 43);
+    }
+
+    .result-container {
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(61, 63, 63);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      color: rgb(241, 241, 241);
+    }
+
+    .crop-name {
+      font-size: 40px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .confidence {
+      font-size: 24px;
+      font-weight: bold;
+      color: rgb(200, 200, 200);
+      margin-top: 20px;
+    }
+
+    .back-button {
+      margin-top: 30px;
+      display: inline-block;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      background-color: rgb(20, 184, 166);
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: rgb(20, 166, 155);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="result-container">
+    <h2 class="crop-name">Crop Yield: {{ result }}</h2>
+    <div class="confidence">
+      Prediction: {{ confidence }}%
+    </div>
+    <a href="{% url 'home' %}" class="back-button">Make Another Prediction</a>
+  </div>
+
+</body>
+
+</html>

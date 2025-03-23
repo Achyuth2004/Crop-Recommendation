@@ -1,0 +1,133 @@
+ \ <!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Home page</title>
+
+  <script src="https://kit.fontawesome.com/47101d2035.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+      *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 110vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75));
+    background-size: cover;
+    background-position: center;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center ;
+    color: #fff;
+}
+.content h1{
+    font-size: 40px;
+    margin-top: 80px;
+    font-weight: bolder;
+}
+.IN{
+  border: 3px solid rgb(84, 236, 236);
+  height: 30px;
+  width: 500px;
+  border-radius: 10px;
+  
+}
+button{
+    height: 60px;
+    width: 250px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25PX;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition-duration: 0.5s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
+    </style>
+</head>
+
+
+<body>
+  <form action="result">
+    {% csrf_token %}
+    <div class="banner">
+      <div class="content">
+        <h1>CROP YIELD PREDICTION</h1>
+        <br>
+    <div>
+      <input class="IN" placeholder="N value" type="text" required name="        N">
+    </div><br>
+    <div>
+      <input class="IN" placeholder="P value" required type="text" name="        P">
+    </div><br>
+
+    <div>
+      <input class="IN" placeholder="K  value" required type="text" name="        K">
+    </div><br>
+
+    <div>
+      <input class="IN" placeholder="Temperature level" required type="text" name="TEMPARATURE">
+    </div><br>
+
+    <div>
+      <input class="IN" placeholder="Humidity value" required type="text" name="HUMIDITY">
+    </div><br>
+
+
+    <div>
+      <input class="IN" placeholder="Ph value" required type="text" name="       PH">
+    </div><br>
+
+
+    <div>
+      <input class="IN" placeholder="Rainfall level" required type="text" name="     RAIN">
+    </div><br>
+
+    <div>
+      <input class="IN" placeholder="soil_value" required type="text" name="soil_type">
+    </div><br>
+
+
+    <button type="submit"><span></span>PREDICTION</button>
+
+  </form>
+</body>
+
+</html> 
+
+
+
+ 
